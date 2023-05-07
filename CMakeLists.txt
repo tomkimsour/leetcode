@@ -15,6 +15,10 @@ add_subdirectory(
 add_subdirectory(  
   ${PROJECT_SOURCE_DIR}/49-group-anagrams
 )
+
+add_subdirectory(  
+  ${PROJECT_SOURCE_DIR}/347-top-k-frequent
+)
 # install(TARGETS 242-valid-anagram 1-two-sum DESTINATION release)
 
 

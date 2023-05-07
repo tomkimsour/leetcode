@@ -12,6 +12,9 @@ add_subdirectory(
   ${PROJECT_SOURCE_DIR}/242-valid-anagram
 )
 
+add_subdirectory(  
+  ${PROJECT_SOURCE_DIR}/49-group-anagrams
+)
 # install(TARGETS 242-valid-anagram 1-two-sum DESTINATION release)
 
 

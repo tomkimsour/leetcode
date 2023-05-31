@@ -25,13 +25,13 @@
 #include <unordered_map>
 #include <utility>
 #include <vector>
+#include <algorithm>
 
 #include "leetcode_utils.hpp"
 
 class Solution {
 public:
-  std::vector<std::vector<std::string>>
-  groupAnagrams(const std::vector<std::string> &strs) {
+  std::vector<std::vector<std::string>> groupAnagrams(const std::vector<std::string>& strs) {
     std::vector<std::vector<std::string>> answer;
     std::unordered_map<std::string, std::vector<std::string>> map;
     /*
@@ -57,7 +57,7 @@ public:
 
 int main() {
   Solution s;
-  std::vector<std::string> test1{"eat", "tea", "tan", "ate", "nat", "bat"};
+  std::vector<std::string> test1{ "eat", "tea", "tan", "ate", "nat", "bat" };
   s.groupAnagrams(test1);
   return 0;
 }

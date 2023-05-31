@@ -19,6 +19,10 @@ add_subdirectory(
 add_subdirectory(  
   ${PROJECT_SOURCE_DIR}/347-top-k-frequent
 )
+
+add_subdirectory(  
+  ${PROJECT_SOURCE_DIR}/238-product-of-array-except-self
+)
 # install(TARGETS 242-valid-anagram 1-two-sum DESTINATION release)
 
 

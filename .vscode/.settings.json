@@ -1,0 +1,41 @@
+{
+    "editor.tabSize": 4,
+    "editor.rulers": [
+        120
+    ],
+    "files.associations": {
+        "*.repos": "yaml",
+        "*.world": "xml",
+        "*.xacro": "xml",
+        "*.ipp": "cpp",
+        "cstdlib": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "system_error": "cpp",
+        "typeinfo": "cpp",
+        "future": "cpp",
+        "array": "cpp",
+        "iterator": "cpp"
+    },
+    "python.analysis.extraPaths": [
+        "/opt/ros/noetic/lib/python3.8/site-packages/",
+        "./src/perception_pepper/scripts/models"
+    ],
+    "C_Cpp.default.intelliSenseMode": "linux-gcc-x86",
+    "C_Cpp.formatting": "disabled",
+    "clang-format.executable": "/usr/bin/clang-format",
+    "[cpp]": {
+        "editor.formatOnSave": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/build": true,
+        "**/devel": true,
+        "**/log": true
+    },
+    "terminal.integrated.defaultLocation": "view",
+    "cmake.configureOnOpen": false
+}

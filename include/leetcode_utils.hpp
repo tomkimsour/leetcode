@@ -4,11 +4,12 @@
 #include <iostream>
 #include <vector>
 
-template <class T> void print_vec(std::vector<T> input) {
+template <class T>
+void print_vec(std::vector<T> input) {
   for (auto it = input.begin(); it != input.end(); ++it) {
     std::cout << *it << ' ';
   }
-  std::cout << '\n';
+  std::cout << std::endl;
 }
 
-#endif // LEETCODE_UTILSLEETCODE_UTILS
+#endif  // LEETCODE_UTILSLEETCODE_UTILS

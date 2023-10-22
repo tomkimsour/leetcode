@@ -26,32 +26,43 @@
 class Solution {
 public:
   std::vector<int> productExceptSelf(std::vector<int>& nums) {
-    std::vector<int> res;
+    int size = nums.size();
+    std::vector<int> res(size);
+
+    res[0] = 1;
+    for (int i = 1; i < size; i++) {
+      res[i] = nums[i-1] * res[i-1];
+    }
+
     int factor = 1;
-    print_vec(nums);
-    for (auto it = nums.begin(); it != nums.end(); ++it) {
-      factor = factor * (*it);
-      std::cout << factor << std::endl;
+    for (int i = size-1; i >= 0; i--) {
+      res[i] = res[i] * factor;
+      factor = factor * nums[i];
     }
-
-    for (int i = 0; i < nums.size(); i++) {
-      if (nums[i] == 0) {
-        res.push_back(factor);
-      } else {
-        res.push_back(factor / nums[i]);
-      }
-    }
-
     return res;
+    // int n = nums.size();
+    // std::vector<int> output(n);
+    // output[0] = 1;
+    // for(int i=1; i<n; i++){
+    //     output[i] = output[i-1] * nums[i-1];
+    // }
+    // int right = 1;
+    // for(int i=n-1; i>=0; i--){
+    //     output[i] *= right;
+    //     right *= nums[i];
+    // }
+    // return output;
   }
 };
 
 int main() {
   Solution s;
   std::vector<int> test1{ 1, 2, 3, 4 };
+  print_vec<int>(test1);
   auto res = s.productExceptSelf(test1);
   print_vec(res);
   std::vector<int> test2{ -1, 1, 0, -3, 3 };
+  print_vec<int>(test2);
   res = s.productExceptSelf(test2);
   print_vec(res);
   return 0;
